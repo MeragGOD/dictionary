@@ -5,15 +5,15 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class DictionaryCommandline extends Dictionary {
-    public static void dictionaryBasic() throws FileNotFoundException, SQLException {
-        DictionaryManagement.insertFromCommandline();
-        Dictionary.showAllWord();
-    }
-
+    
     public static void dictionaryAdvanced() throws FileNotFoundException {
         DictionaryManagement.insertFromFile();
         Dictionary.showAllWord();
         DictionaryManagement.dictionaryLookup();
+    }
+    public static void dictionaryBasic() throws FileNotFoundException, SQLException {
+        DictionaryManagement.insertFromCommandline();
+        Dictionary.showAllWord();
     }
 
     public static void dictionarySearcher() {
