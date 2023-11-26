@@ -13,7 +13,7 @@ public class DictionaryManagement extends Dictionary {
         listWord.clear();
         listWordTarget.clear();
         try {
-            sc = new Scanner(new File("D:/Dictionary/Dictionary/src/dictionaries.txt"));
+            sc = new Scanner(new File("src/dictionaries.txt"));
             while (sc.hasNext()) {
                 String wordTarget = sc.nextLine().trim();
                 String wordExplain = sc.nextLine().trim();
@@ -87,7 +87,7 @@ public class DictionaryManagement extends Dictionary {
     public static void dictionaryExportToFile() {
         FileWriter fileWriter;
         try {
-            fileWriter = new FileWriter("D:/Dictionary/Dictionary/src/dictionaries.txt");
+            fileWriter = new FileWriter("src/dictionaries.txt");
             for (int i = 0; i < listWord.size(); i++) {
                 fileWriter.write(listWord.get(i).getWord_target() + "\n");
                 fileWriter.write(listWord.get(i).getWord_explain() + "\n");
